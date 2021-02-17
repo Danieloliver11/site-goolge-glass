@@ -1,0 +1,25 @@
+@charset "UTF-8";
+div#fototv img{
+    width: 850px;
+    height: 500px;
+    top: auto;
+}
+
+
+
+video#video {
+    display: block;
+    position: relative;
+    top: 358px;
+    right:-60px ;
+    width:450px;
+    height:300px;
+}
+audio#musica{
+    display: block;
+    position: relative;
+    height:50px;
+    width: 250px;
+    top:773px;
+    left:558px;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>Google Glass</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css" />
+    <link rel ="stylesheet" type="text/css" href="_css/form.css">
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total(){
+            let preco = Number(1500)
+            var qtd = Number(document.getElementById("iquantidade").value)
+            var resu = qtd * preco
+            document.getElementById("ipreco").value = resu
+        }
+    </script>>
+
+
+
+
+</head>
+
+<body>
+
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+            <h1> Google Glass</h1>
+            <h2 > A revolução do Google está chegando </h2>
+        </hgroup>
+
+        </h1>
+        <figure class="foto1" >
+            <img id="icone" src='_imagens/contato.png'  />
+
+        </figure>
+
+
+
+        <nav id="menu" >
+            <h1>MENU PRINCIPAL</h1>
+            <ul >
+                <li onmousemove="mudarIcones('_imagens/home.png') " onmouseleave="mudarIcones('_imagens/contato.png')"><a  href="index.html" target ="_self" >Home</a></li>
+                <li onmousemove = "mudarIcones('_imagens/especificacoes.png')" onmouseleave="mudarIcones('_imagens/contato.png')"><a href ="specs.html" target="_self">Especificações</a></li>
+                <li onmousemove = "mudarIcones('_imagens/fotos.png')" onmouseleave="mudarIcones('_imagens/contato.png')"><a href ="fotos.html" target = _self>Fotos</a></li>
+                <li onmousemove = "mudarIcones('_imagens/multimidia.png')" onmouseleave="mudarIcones('_imagens/contato.png')"><a href ="multimidia.html" target = _self>Multimídia</a></li>
+                <li onmousemove="mudarIcones('_imagens/contato.png')" onmouseleave="mudarIcones('_imagens/contato.png')"><a href ="fale-conosco.html" target = _self >Fale conosco</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <section id="secao-full">
+        <article id="artigopg1">
+            <hgroup id="hgruppg1">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h4>por Gustavo Guanabara</h4>
+                    <h3 class="h">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </hgroup>
+
+
+
+
+
+<!-- todos os dados solicitados tem que estar em ?<form></form> para ser um formulário!-->
+            <!--<fieldset> é para marcar os conjuntos de campo, para cada um dos grupos ()-->
+            <!-- legend vai deixar uma legenda na area fieldset-->
+            <!--METHOD: POST = lento/mais seguro. GET= rápido/menos seguro... ACTION = para onde os dados irão ser enviado! que sera para um email-->
+            <!--ONINPUT="": quando algo for digitado ele vai disparar um procedimento.  -->
+            <form method="post" id="formulario" action="mailto:blabla@hotmail.com" oninput="calc_total()">
+                <fieldset id="identifica"><legend>Identificação do Usuário</legend>
+                    <p><label for="inome"><strong>Nome:</strong></label><input type="text" name="Nnome" id="inome" size="20" maxlength="30" placeholder="Digite seu nome."></p>
+                    <p><label for="isenha"><strong>Senha:</strong><input type="password" name="nsenha" id="isenha" size="15" maxlength="10" placeholder="Max 10 digitos. "></label></p>
+                    <p> <label for="email"><strong>E-mail:</strong></label><input type="email" id="email" size="20"  placeholder="Digite seu E-Mail."></p>
+
+
+                    <fieldset id="sexo"><legend>Sexo:</legend>
+                        <p><input type="radio" name="nsexo" id="iin" checked><label for="iin">Indefinido</label></br></p>
+                        <p><input type="radio" name="nsexo" id="im"><label for ="im">Masculino</label></br></p>
+                        <p><input type="radio" name="nsexo" id="if"><label for="if">Feminino</label></p>
+                    </fieldset>
+
+                    <p><label for="idata"><strong>Data de Nascimento:</strong></label><input type="date" name="ntada" id="idata"></p>
+                </fieldset>
+                <fieldset id="endereco">
+                    <legend>Endereço do Usuário</legend>
+                    <p><label for="ilocal"><strong>Logradouro:</strong></label><input type="text" name="nlocal" id="ilocal" size="30" maxlength="40" placeholder="Bairro,Rua. "></p>
+                    <p> <label for ="inumero"><strong>Número:</strong></label><input type="number" name="nnumero" id="inumero"  min="1" max="9999" size="5" maxlength="4"></p>
+                    <p><label for="iestado"><strong>Estado:</strong></label> <!--SELECT: caixa combinadas que tera OPTION -->
+
+                        <select id="iestado">
+                            <option value="0">Selecione o Estado</option>
+                            <option value="DF">Distrito Federal</option>
+                            <optgroup label="Norte">
+                                <option value="AM">Amazonas</option>
+                                <option value="RR">Roraima</option>
+                                <option value="AP">Amapá</option>
+                                <option value="PA">Pará</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="AC">Acre</option>
+                            </optgroup>
+                            <optgroup label="Nordeste">
+                                <option value="MA">Maranhão</option>
+                                <option value="PI">Piauí</option>
+                                <option value="CE">Ceará</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                            </optgroup>
+                            <optgroup label="Centro-Oeste">
+                                <option value="GO">Goiás</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MT">Mato Grosso</option>
+                            </optgroup>
+                            <optgroup label="Sudeste">
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="ES">Espirito Santo</option>
+                            </optgroup>
+                            <optgroup label="Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                            </optgroup>
+                            <resource>
+                        </select>
+
+                    <p><label for="icidade"><strong>Cidade:</strong></label>
+                    <input type="text" name="ncidade" id="icidade" size="18" maxlength="20" placeholder="Digite sua cidade" list="iicidade">
+                    <datalist id="iicidade" inlist="">
+                        <option value="Rio Branco"></option>
+                        <option value="Maceió"></option>
+                        <option value="Macapá"></option>
+                        <option value="Manaus"></option>
+                        <option value="Salvador"></option>
+                        <option value="Fortaleza"></option>
+                        <option value="Brasília"></option>
+                        <option value="Vitória"></option>
+                        <option value="Goiânia"></option>
+                        <option value="São Luís"></option>
+                        <option value="Cuiabá"></option>
+                        <option value="Campo Grande"></option>
+                        <option value="Belo Horizonte"></option>
+                        <option value="Belém"></option>
+                        <option value="João Pessoa"></option>
+                        <option value="Curitiba"></option>
+                        <option value="Recife"></option>
+                        <option value="Teresina"></option>
+                        <option value="Rio de Janeiro"></option>
+                        <option value="Natal"></option>
+                        <option value="Porto Alegre"></option>
+                        <option value="Porto Velho"></option>
+                        <option value="Boa Vista"></option>
+                        <option value="Florianópolis"></option>
+                        <option value="São Paulo"></option>
+                        <option value="Aracaju"></option>
+                        <option value="Palmas"></option>
+                    </datalist>
+
+                </fieldset>
+                <!---->
+                <fieldset id="mensagens">
+                    <legend>Mensagem do Usuário</legend>
+                    <p>Grau de Urgência: Min <input type="range" name="nurge" id="iurge" min="1" max="10" step="1"> Máx</p>
+                    <p>Mensagem:</br><textarea  name="ntex" id="itex"  cols="50" rows="5" placeholder="Digite aqui sua mensagem"></textarea></p>
+                </fieldset>
+                <fieldset id="custo">
+                    <legend>Quero um Google Glass</legend>
+                    <label for="igosta">Gostaria de adquirir um Google Glass quando disponível</label>
+                    <input type="checkbox" name="ngosta" id="igosta" checked>
+                    <p>Cor:<input type="color" id="icolor" value="#0000FF" ></p>
+                    <p> Quantidade:<input type="number" id="iquantidade" min="0" max="10" value="0"></p>
+                    <p> Preço Total: R$<input type="text" id="ipreco" placeholder="Total a Pagar" readonly></p>
+
+                </fieldset>
+            </form>
+
+
+<input type="image" src="_imagens/botao-enviar.png" name="nbotaoenviar" id="ibotaoenviar">
+    <footer id="rodape">
+        <p>Copyright 2013 - by Gustavo Guanabara </br>
+            <a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank">YouTube</a> | Twitter</p>
+    </footer>
+
+</div>
+</body>
+</html>

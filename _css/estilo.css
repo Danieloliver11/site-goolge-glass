@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/* importa uma fonte diretamente do google fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;1,200&display=swap');
+/* importa uma fonte da pasta fontes*/
+@font-face {
+    font-family: nova;
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+
+}
+body {
+    background-color: gainsboro;
+    font-family:sans-serif;
+
+}
+
+/* interface */
+div#interface{
+
+    width: 900px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 3px darkgray;
+    top: -15px;
+    /*margin: -22px 0px 0px 550px;*/
+    margin: auto;
+    padding: 20px;
+}
+header#cabecalho{
+    border-bottom: 1px  black solid;
+    background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 75px; /* manipulando a imagem e manipulando a posição por pixel*/
+    padding-bottom: 50px;
+
+}
+
+header#cabecalho h1{
+    color: #818180;
+    font-family: nova;
+    font-size:  35px;
+    text-shadow: 1px 0px 5px gray;
+    padding: 0px;
+    margin-bottom: 0;
+
+}
+header#cabecalho h2{
+    color: grey;
+    font-family: 'Titillium Web', sans-serif;
+    text-shadow: 1px 0px 5px gray;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+figure.foto1{
+    margin: -80px 01px 01px 745px;
+    position:absolute;
+
+}
+
+figure.min {
+    border: 8px solid white;
+    box-shadow: 4px 4px 8px;
+    position: relative;
+
+
+
+}
+figure.min img{
+    width: 100%;
+    height: 10%;
+    position: relative;
+}
+
+
+figure.min figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 25px;
+
+}
+figure.min:hover figcaption{
+    opacity: 1;
+    transition: opacity 1s;
+    text-align: justify;
+
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+p {
+    text-indent: 50px;
+    text-align: justify;
+}
+/* formatação do  menu */
+nav#menu{
+    display: block;
+
+}
+
+nav#menu ul{
+    list-style:none;
+    text-transform: uppercase; /* trasforma a fonte em maiuscula */
+    position: absolute;
+    top: -8px;
+    /*left: 830px;*/
+
+}
+
+nav#menu li{
+    display: inline-block;
+    background-color: gainsboro;
+    padding: 10px;
+    margin: 2px;
+
+}
+nav#menu li:hover {
+    transition: background-color 1s;
+    background-color: darkgray;
+
+}
+
+nav#menu a {
+    text-decoration: none;
+    color: black;
+}
+nav#menu a:hover{
+    color: white;
+}
+
+nav#menu h1{
+    display: none;
+}
+
+/* estilo de divisão de pagina*/
+
+section#secao{
+    display: block;
+    width: 500px;
+    padding-right:15px;
+    float: left;
+    border-right: 1px  black solid;
+
+}
+aside#lado{
+    display:block;
+    width: 350px;
+    float: right;
+    background-color: silver;
+    padding: 10px;
+    margin-top: 10px;
+   border: silver solid 1px;
+    box-shadow:  2px 2px 2px black;
+
+
+}
+footer#rodape{
+    display:block;
+    clear: both;
+    border-top: 1px solid black;
+}
+footer#rodape p{
+    text-align: center;
+}
+footer#rodape a{
+    text-decoration: crimson;
+    color: red;
+}
+
+/*tabela da especificação técnica*/
+
+table#tabelapg1{
+    border: 1px solid grey;
+    border-spacing: 0px;
+    margin: auto;
+    background-color: silver;
+
+}
+able#tabelapg1 tr{
+    border: 1px solid grey;
+    padding: 5px;
+
+}
+
+table#tabelapg1 td{
+    border: 1px solid grey;
+    padding: 10px;
+
+
+}
+table#tabelapg1 td.t{
+    text-align: right;
+    margin-right: 0px;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    vertical-align: top;
+    background-color: grey;
+}
+table#tabelapg1 caption{
+    color: grey;
+    font-weight: bold;
+    font-size: 20px;
+    text-align:center;
+}
+table#tabelapg1 span{
+    color:black;
+    font-size: 12px;
+    display:block ;
+    float: right;
+    margin-top: 15px;
+
+}
+/*artigos*/
+
+article#artigopg1 h2{
+    font-size: 20px;
+    color: white;
+    background-color:grey;
+}
+article#artigopg1 hgroup#hgruppg1 h1 {
+    font-family: nova;
+    color: grey;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+article#artigopg1 hgroup#hgruppg1 h4{
+    color: grey;
+}
+article#artigopg1 hgroup#hgruppg1 h3{
+    color: grey;
+}
+
+article#artigopg1 hgroup#hgruppg1 h3.h{
+    text-align: right;
+    font-size: 15px;
+    color: darkgray;
+}
+
+aside#lado h1{
+    font-family: nova;
+    color: grey;
+    font-size: 25px;
+
+}
+
+aside#lado h1{
+    font-size: 25px;
+}
+aside#lado h2{
+    font-size: 20px;
+    color: white;
+    background-color: grey;
+
+}
+aside#lado h3{
+    font-size: 20px;
+    color: white;
+    background-color: grey;
+
+}

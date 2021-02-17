@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <script>
+        /* variavel global  para ver se esta quebrada ou nao  */
+        var quebrada = false;
+        function aparenciaLuz(parametro) {
+            if (parametro == 1){
+                variavel = "_imagens/lampada-acesa.jpg";
+            }
+            if (parametro == 2) {
+                variavel = "_imagens/lampada-apagada.jpg";
+            }
+            if (parametro == 3) {
+                variavel = "_imagens/lampada-quebrada.jpg";
+            }
+            /* esse IF é para parar a ocorrencia e deixar quebado a lampada !*/
+            if (quebrada == false) {
+                document.getElementById("luz").src = variavel;
+                if (parametro == 3) {
+                    quebrada = true;
+                }
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+<h1 style="text-align: center">Testando JavaScript  </h1>
+<h2 style="text-align: center">De uma maneira mais facil com funções e passando Parâmetros   </h2>
+
+
+<img src="_imagens/lampada-apagada.jpg" id ="luz" onmousemove="aparenciaLuz(1)" onmouseleave="aparenciaLuz(2)" onclick="aparenciaLuz(3)"/>
+
+
+
+<h3 style ="text-align: center"> Como criar funções em JavaScript que recebem parâmetros. Além disso, veremos o conceito de máquina de estados para aprimorar ainda mais nossos scripts.</h3>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+ul#album-foto{
+    margin: 0 auto;
+    padding: 50px;
+    list-style: none;
+   /* overflow: hidden;*/
+
+}
+/*aqui foi criado as box deixando  um do lado do outro*/
+ul#album-foto li {
+    float: right;
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #aea7a7;
+
+
+}
+/*o texto dentro das box*/
+ul#album-foto span{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    background: rgba(0,0,0,.3);
+    padding: 3px;
+    opacity: 0 ;
+    line-height: 370px; /*permite controlar o espaçamento entre as linhas de um texto. A distância é medida entre as linhas de base*/
+    font-size: 10pt;
+}
+
+ul#album-foto li:hover span {
+    opacity: 1;
+}
+
+/*colocando imagens em cada box, posicionando a imagem contida com o foco centralizada */
+li#foto1{
+    background: url("../_imagens/galeria-01.jpg") no-repeat;
+    background-position: 50% 50%; /* Mostra o meio da imagens deixando centralizado*/
+    background-color: white;
+}
+
+/* aqui no backgrond-size: é para deixar a imagem do mesmo tamanho que a box. se não ira crescer com a imagem centralizada!  */
+ul#album-foto li#foto1:hover{
+    background-size: 200px 200px;
+    /*background-position: 0px 0px;*/
+}
+
+li#foto2{
+    background: url("../_imagens/galeria-02.jpg") ;
+    background-position: 50% 50%;
+}
+
+ul#album-foto li#foto2:hover{
+    background-size: 200px 200px;
+}
+
+li#foto3{
+    background: url("../_imagens/galeria-03.jpg") ;
+    background-position: 50% 50%;
+}
+ul#album-foto li#foto3:hover{
+    background-size: 200px 200px;
+}
+
+li#foto4{
+    background: url("../_imagens/galeria-04.jpg") ;
+    background-position: 50% 50%;
+}
+ul#album-foto li#foto4:hover{
+    background-size: 200px 200px;
+}
+
+li#foto5{
+    background: url("../_imagens/galeria-05.jpg") ;
+    background-position: 50% 50%;
+}
+ul#album-foto li#foto5:hover{
+    background-size: 200px 200px;
+}
+
+li#foto6{
+    background: url("../_imagens/galeria-06.jpg") ;
+    background-position: 50% 50%;
+}
+ul#album-foto li#foto6:hover{
+    background-size: 200px 200px;
+}
+
+/*-trasform: scale(1.8); vai dar um EFEITO e modificar a ESCALA(scale) das 'li' deixando maior quando passar o mouse!*/
+/*transition: all .4s; /* esse EFEITO e para deixar TODOS(all) webkits com um efeito de transição  de .4 segundo(.4s)*/
+ul#album-foto li:hover{
+    transform: scale(1.8);
+    transition: all .4s;
+
+}
+
+
+
+
+
+/*line-height: 100px;*/
